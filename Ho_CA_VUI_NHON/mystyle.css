@@ -1,0 +1,203 @@
+#be_nuoc {
+    width: 900px;   
+    height: 500px;  
+    border: 5px solid blue; 
+    position: relative;   
+    overflow: hidden;    
+    /* background-image: url(imgages/BgOcean.gif); */ 
+    background-color: rgb(150, 208, 229);  
+    background-position: center;   
+    background-size: cover;      
+}
+body {
+    background-color: #aee6ff;  
+    display: flex;   
+    justify-content: center;  
+    align-items: center;   
+    height: 100vh;    
+}
+#commonfish{
+    left: -200px;
+    top:500px;
+    position: absolute;
+    animation-name: left-right ;
+    animation-duration: 10s ;
+    animation-timing-function: linear ;
+    animation-iteration-count:1;
+    animation-play-state: 5s ; 
+}
+#mermaid{
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  animation: right-diagonally 20s ease-in-out infinite;
+}
+
+.fish{
+    position: absolute;
+    animation-name: left-right-loop ;
+    animation-timing-function: linear ;
+    animation-iteration-count: infinite ;
+    animation-play-state: running ; 
+}
+#turtle {
+    position: absolute;
+    left:-100px; bottom: 100px;
+    animation-name: diagonally;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.school-of-fish {
+    /* right: -100px; top: 150px; */
+    position: absolute;
+    animation-name: right-left-loop;
+    /* animation-duration: 10s; */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.zizzac {
+    position: absolute;
+    animation-name: zizzac;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+.bubbles div{
+    bottom: -50%;
+    position: absolute;
+    animation-name: bottom-top ;
+    animation-timing-function: ease-in-out ;
+    animation-iteration-count: infinite ;
+    animation-play-state: running ;
+    display: flex ;
+}
+
+.jelifish {
+    bottom: -50%;
+    position: absolute;
+    animation-duration: 20s;
+    animation-name: bottom-top;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+#fishes{
+  left: 90%; top:90%;
+  position: absolute;
+  animation-name: Fishes;
+  animation-duration: 20s ;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+.tree {
+  position: absolute;
+  bottom: 0%; 
+  transform: translateX(-50%); 
+}
+
+#whale{
+    left: 0%; bottom: -10% ;
+    position: absolute;
+    animation-name: left-right-loop ; 
+    animation-duration: 30s;
+    animation-timing-function: ease-in;
+    animation-play-state: running;
+    animation-iteration-count: infinite ;
+}
+
+
+
+#octopus {
+    position: absolute;
+    left:-100px; top: 0px;
+    animation-name: octopus;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes right-left-loop{      
+    0% {right: 0%; transform: scaleX(1);}  
+    49% {right: calc(100% - 10%); transform: scaleX(1);}   
+    50% {right: calc(100% - 10%); transform: scaleX(-1);} 
+    99% {right: 0%; transform: scaleX(-1);}  
+    100% {right: 0%; transform: scaleX(1);} 
+}
+@keyframes left-right-loop{
+    0% {left: 0%; transform: scaleX(1);} 
+    49% {left: calc(100% - 10%); transform: scaleX(1);}  
+    /* di tu trai sang phai */
+    50% {left: calc(100% - 10%); transform: scaleX(-1);} 
+    99% {left: 0%; transform: scaleX(-1);}  
+    100% {left: 0%; transform: scaleX(1);}  
+}
+
+@keyframes left-right {    
+    0% {left: 100px; top: 300px ;} 
+    100% {left: 900px ; top:300px ;} 
+}
+@keyframes right-diagonally {
+    0% {right: 0%; top: 10%; transform: rotate(-20deg) scaleX(1);}  
+    49% {right: calc(100% - 30%); top: 70%; transform: rotate(-20deg) scaleX(1);}   
+    50% {right: calc(100% - 30% ); top: 70%; transform: scaleX(-1);} 
+    75% {right: calc(100% - 50%); top: 70%; transform: scaleX(-1);}  
+    76% {right: calc(100% - 50%); top: 70%; transform: rotate(-20deg) scaleX(-1);} 
+    99% {right: 0%; top: 10%; transform: scaleX(-1);} 
+    100% {right: 0%; top: 10%; transform: scaleX(1);}  
+}
+
+@keyframes diagonally {   /*di ngang roi di cheo , roi ve cho cu  */
+    0% {left: 0%; top: 70%; transform: scaleX(1);}  
+    49% {left: calc(100% - 50% ); top: 70%; transform: scaleX(1);}   
+    50% {left: calc(100% - 50% ); top: 70%; transform:rotate(-20deg)  scaleX(1) ;} 
+    75% {left: calc(100% - 20%); top: 30%; transform: scaleX(1);}  
+    76% {left: calc(100% - 20%); top: 30%; transform: rotate(-20deg) scaleX(-1) ;}
+    99% {left: 0%; top: 70%; transform: scaleX(-1);}
+    100% {left: 0%; top: 70%; transform: scaleX(1);}  
+}
+
+@keyframes octopus{  
+    0% {left: 0%; top: 0%; transform: scaleX(1);}  
+    24% {left: 25%; top: 50%; transform: scaleX(1);}  
+    25% {left: 25%; top: 50%; transform: scaleX(-1);}
+    49%{left: 0%; top: 75%; transform: scaleX(-1);}   
+    50%{left: 0%; top: 75%; transform: scaleX(1);}   
+    69% {left: calc(100% - 300px); top: 25%; transform: scaleX(1);}  
+    70% {left: calc(100% - 300px); top: 25%; transform: scaleX(-1);} 
+    99% {left: 0%; top: 0%; transform: scaleX(-1);}  
+    100% {left: 0%; top: 0%; transform: scaleX(1);}  
+}
+
+@keyframes zizzac {
+    0%   { left: 20%;   top: 20%;  transform: rotate(20deg)  scaleX(-1); } 
+    9%   { left: 50%;  top: 30%;  transform: rotate(20deg)  scaleX(-1); } 
+    /* di cheo xuong giua  */
+    10%  { left: 50%;  top: 30%;  transform: rotate(-20deg) scaleX(-1); }
+    19%  { left: 65%;  top: 10%;  transform: rotate(-20deg) scaleX(-1); }
+    /* di cheo len tren  */
+    20%  { left: 65%;  top: 10%;  transform: scaleX(1); }
+    29%  { left: 50%;  top: 10%;  transform: scaleX(1); }
+    /* di ngang qua ben trai */
+    30%  { left: 50%;  top: 10%;  transform: rotate(-30deg) scaleX(1); }
+    49%  { left: 10%;  top: 65%;  transform: rotate(-30deg) scaleX(1); }
+    /* di cheo xuong duoi */
+    50%  { left: 10%;  top: 65%;  transform: scaleX(-1); }
+    59%  { left: 65%;  top: 65%;  transform: scaleX(-1); }
+    /* di ngang ve ben trai */
+    60%  { left: 65%;  top: 65%;  transform: rotate(30deg) scaleX(1); }
+    99%  { left: 20%;   top: 20%;  transform: rotate(30deg) scaleX(1); }
+    100% { left: 20%;   top: 20%;  transform: rotate(20deg) scaleX(-1); }
+
+}
+
+
+
+/* di tu duoi len  */
+@keyframes bottom-top {
+  0% {bottom : -50% ; transform: scaleY(1);}
+  100% {bottom: 150% ; transform: scaleY(1);}
+}
